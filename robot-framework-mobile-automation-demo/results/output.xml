@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.10.12 on linux)" generated="2025-11-02T04:16:40.698129" rpa="false" schemaversion="5">
+<suite id="s1" name="Signup-Test" source="/home/jainy007/LTTS/robot-framework-poc/robot-framework-mobile-automation-demo/test-cases/signup-test.robot">
+<test id="s1-t1" name="Verify That A New User Can Sign Up To The Application" line="12">
+<kw name="Open Test Application" owner="CommonPo" type="SETUP">
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Open Android Application" owner="CommonPo">
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>${APPIUM_SERVER_URL}</arg>
+<arg>automationName=${ANDROID_AUTOMATION_NAME}</arg>
+<arg>platformName=${ANDROID_PLATFORM_NAME}</arg>
+<arg>platformVersion=${ANDROID_PLATFORM_VERSION}</arg>
+<arg>deviceName=${ANDROID_DEVICE_NAME}</arg>
+<arg>app=${ANDROID_APP}</arg>
+<arg>appPackage=${ANDROID_APP_PACKAGE}</arg>
+<arg>appActivity=${ANDROID_APP_ACTIVITY}</arg>
+<doc>Opens a new application to the given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://appium.io/docs/en/2.19/guides/caps/
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | No     | alias             |</doc>
+<status status="PASS" start="2025-11-02T04:16:40.778128" elapsed="2.974926"/>
+</kw>
+<kw name="Set Appium Timeout" owner="AppiumLibrary">
+<arg>${TIMEOUT}</arg>
+<doc>Sets the timeout in ``seconds`` used by various keywords.</doc>
+<status status="PASS" start="2025-11-02T04:16:43.753452" elapsed="0.000256"/>
+</kw>
+<doc>Open the Android application</doc>
+<status status="PASS" start="2025-11-02T04:16:40.777978" elapsed="2.975785"/>
+</kw>
+<arg>'${PLATFORM_NAME}' == '${ANDROID_PLATFORM_NAME}'</arg>
+<arg>Open Android Application</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-11-02T04:16:40.777736" elapsed="2.976056"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${PLATFORM_NAME}' == '${IOS_PLATFORM_NAME}'</arg>
+<arg>Open IOS Application</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-11-02T04:16:43.753909" elapsed="0.000153"/>
+</kw>
+<doc>Open the testing application</doc>
+<status status="PASS" start="2025-11-02T04:16:40.777324" elapsed="2.976781"/>
+</kw>
+<kw name="Navigate To Login Screen" owner="NavigationBarPo">
+<kw name="Click Element [Arguments] ${loginIcon} ${SMALL_RETRY_COUNT}" owner="CommonPo" source_name="Click Element [Arguments] ${locator} ${retryScale}">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element specified by the ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-02T04:16:43.754897" elapsed="0.297429"/>
+</kw>
+<arg>${retryScale}</arg>
+<arg>${RETRY_DELAY}</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-11-02T04:16:43.754759" elapsed="0.297637"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-11-02T04:16:44.053605" level="INFO">Clicking element 'accessibility_id=Login'.</msg>
+<arg>${locator}</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-02T04:16:44.052820" elapsed="0.919634"/>
+</kw>
+<arg>${retryScale}</arg>
+<arg>${RETRY_DELAY}</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-11-02T04:16:44.052578" elapsed="0.919956"/>
+</kw>
+<doc>Click on a given button</doc>
+<status status="PASS" start="2025-11-02T04:16:43.754592" elapsed="1.217996"/>
+</kw>
+<status status="PASS" start="2025-11-02T04:16:43.754289" elapsed="1.218332"/>
+</kw>
+<kw name="Click On The 'Sign up' Container" owner="LoginScreenPo">
+<kw name="Click Element [Arguments] ${signupContainer} ${SMALL_RETRY_COUNT}" owner="CommonPo" source_name="Click Element [Arguments] ${locator} ${retryScale}">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element specified by the ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-02T04:16:44.973626" elapsed="0.018238"/>
+</kw>
+<arg>${retryScale}</arg>
+<arg>${RETRY_DELAY}</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-11-02T04:16:44.973447" elapsed="0.018485"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-11-02T04:16:44.993253" level="INFO">Clicking element 'accessibility_id=button-sign-up-container'.</msg>
+<arg>${locator}</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-02T04:16:44.992340" elapsed="0.044094"/>
+</kw>
+<arg>${retryScale}</arg>
+<arg>${RETRY_DELAY}</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-11-02T04:16:44.992103" elapsed="0.044413"/>
+</kw>
+<doc>Click on a given button</doc>
+<status status="PASS" start="2025-11-02T04:16:44.973225" elapsed="0.063346"/>
+</kw>
+<status status="PASS" start="2025-11-02T04:16:44.972854" elapsed="0.063751"/>
+</kw>
+<kw name="Get Random Email Address" owner="CommonPo">
+<kw name="Get Random Text" owner="CommonPo">
+<kw name="Generate Random String" owner="String">
+<msg time="2025-11-02T04:16:45.037506" level="INFO">${randomText} = CZmPomTo</msg>
+<var>${randomText}</var>
+<arg>8</arg>
+<arg>[LETTERS]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2025-11-02T04:16:45.037274" elapsed="0.000250"/>
+</kw>
+<kw name="Return From Keyword" owner="BuiltIn">
+<msg time="2025-11-02T04:16:45.037685" level="INFO">Returning from the enclosing user keyword.</msg>
+<arg>${randomText}</arg>
+<doc>Returns from the enclosing user keyword.</doc>
+<status status="PASS" start="2025-11-02T04:16:45.037621" elapsed="0.000117"/>
+</kw>
+<msg time="2025-11-02T04:16:45.037818" level="INFO">${randomText} = CZmPomTo</msg>
+<var>${randomText}</var>
+<doc>Return random text value</doc>
+<status status="PASS" start="2025-11-02T04:16:45.037104" elapsed="0.000727"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-11-02T04:16:45.038007" level="INFO">${randomEmailAddress} = CZmPomTo@mailinator.com</msg>
+<var>${randomEmailAddress}</var>
+<arg>${randomText}@mailinator.com</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-11-02T04:16:45.037911" elapsed="0.000111"/>
+</kw>
+<kw name="Return From Keyword" owner="BuiltIn">
+<msg time="2025-11-02T04:16:45.038142" level="INFO">Returning from the enclosing user keyword.</msg>
+<arg>${randomEmailAddress}</arg>
+<doc>Returns from the enclosing user keyword.</doc>
+<status status="PASS" start="2025-11-02T04:16:45.038106" elapsed="0.000150"/>
+</kw>
+<msg time="2025-11-02T04:16:45.038333" level="INFO">${emailAddress} = CZmPomTo@mailinator.com</msg>
+<var>${emailAddress}</var>
+<doc>Return random email address</doc>
+<status status="PASS" start="2025-11-02T04:16:45.036851" elapsed="0.001495"/>
+</kw>
+<kw name="Sign Up To The Application [Arguments] ${emailAddress} ${PASSWORD} ${PASSWORD}" owner="LoginScreenPo" source_name="Sign Up To The Application [Arguments] ${emailAddress} ${password} ${confirmPassword}">
+<kw name="Input Email Address [Arguments] ${emailAddress}" owner="LoginScreenPo" source_name="Input Email Address [Arguments] ${emailAddress}">
+<kw name="Input Text [Arguments] ${emailAddressTextbox} ${emailAddress} ${SMALL_RETRY_COUNT}" owner="CommonPo" source_name="Input Text [Arguments] ${textBoxLocator} ${text} ${retryScale}">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<arg>${textBoxLocator}</arg>
+<doc>Waits until the element specified by the ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-02T04:16:45.039590" elapsed="0.856523"/>
+</kw>
+<arg>${retryScale}</arg>
+<arg>${RETRY_DELAY}</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${textBoxLocator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-11-02T04:16:45.039378" elapsed="0.856845"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2025-11-02T04:16:45.897924" level="INFO">Typing text 'CZmPomTo@mailinator.com' into text field 'accessibility_id=input-email'</msg>
+<arg>${textBoxLocator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-02T04:16:45.896876" elapsed="0.541926"/>
+</kw>
+<arg>${retryScale}</arg>
+<arg>${RETRY_DELAY}</arg>
+<arg>Input Text</arg>
+<arg>${textBoxLocator}</arg>
+<arg>${text}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-11-02T04:16:45.896477" elapsed="0.542412"/>
+</kw>
+<doc>Input text into a text box</doc>
+<status status="PASS" start="2025-11-02T04:16:45.039181" elapsed="1.399768"/>
+</kw>
+<status status="PASS" start="2025-11-02T04:16:45.038874" elapsed="1.400109"/>
+</kw>
+<kw name="Input Password [Arguments] ${password}" owner="LoginScreenPo" source_name="Input Password [Arguments] ${password}">
+<kw name="Input Text [Arguments] ${passwordTextbox} ${password} ${SMALL_RETRY_COUNT}" owner="CommonPo" source_name="Input Text [Arguments] ${textBoxLocator} ${text} ${retryScale}">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<arg>${textBoxLocator}</arg>
+<doc>Waits until the element specified by the ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-02T04:16:46.440207" elapsed="0.598958"/>
+</kw>
+<arg>${retryScale}</arg>
+<arg>${RETRY_DELAY}</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${textBoxLocator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-11-02T04:16:46.440014" elapsed="0.599219"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2025-11-02T04:16:47.040404" level="INFO">Typing text 'osanda@SL' into text field 'accessibility_id=input-password'</msg>
+<arg>${textBoxLocator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-02T04:16:47.039649" elapsed="0.518824"/>
+</kw>
+<arg>${retryScale}</arg>
+<arg>${RETRY_DELAY}</arg>
+<arg>Input Text</arg>
+<arg>${textBoxLocator}</arg>
+<arg>${text}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-11-02T04:16:47.039411" elapsed="0.519142"/>
+</kw>
+<doc>Input text into a text box</doc>
+<status status="PASS" start="2025-11-02T04:16:46.439752" elapsed="1.118858"/>
+</kw>
+<status status="PASS" start="2025-11-02T04:16:46.439281" elapsed="1.119363"/>
+</kw>
+<kw name="Input Confirm Password [Arguments] ${confirmPassword}" owner="LoginScreenPo" source_name="Input Confirm Password [Arguments] ${confirmPassword}">
+<kw name="Input Text [Arguments] ${confirmPasswordTextbox} ${confirmPassword} ${SMALL_RETRY_COUNT}" owner="CommonPo" source_name="Input Text [Arguments] ${textBoxLocator} ${text} ${retryScale}">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<arg>${textBoxLocator}</arg>
+<doc>Waits until the element specified by the ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-02T04:16:47.559776" elapsed="0.599458"/>
+</kw>
+<arg>${retryScale}</arg>
+<arg>${RETRY_DELAY}</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${textBoxLocator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-11-02T04:16:47.559595" elapsed="0.599716"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2025-11-02T04:16:48.160723" level="INFO">Typing text 'osanda@SL' into text field 'accessibility_id=input-repeat-password'</msg>
+<arg>${textBoxLocator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-02T04:16:48.159778" elapsed="0.026326"/>
+</kw>
+<arg>${retryScale}</arg>
+<arg>${RETRY_DELAY}</arg>
+<arg>Input Text</arg>
+<arg>${textBoxLocator}</arg>
+<arg>${text}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-11-02T04:16:48.159512" elapsed="0.026677"/>
+</kw>
+<doc>Input text into a text box</doc>
+<status status="PASS" start="2025-11-02T04:16:47.559362" elapsed="0.626883"/>
+</kw>
+<status status="PASS" start="2025-11-02T04:16:47.558921" elapsed="0.627355"/>
+</kw>
+<kw name="Click On The 'SIGN UP' Button" owner="LoginScreenPo">
+<kw name="Click Element [Arguments] ${signupButton} ${SMALL_RETRY_COUNT}" owner="CommonPo" source_name="Click Element [Arguments] ${locator} ${retryScale}">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element specified by the ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-02T04:16:48.187225" elapsed="0.611063"/>
+</kw>
+<arg>${retryScale}</arg>
+<arg>${RETRY_DELAY}</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-11-02T04:16:48.187050" elapsed="0.611312"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-11-02T04:16:48.799758" level="INFO">Clicking element 'accessibility_id=button-SIGN UP'.</msg>
+<arg>${locator}</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-02T04:16:48.798821" elapsed="0.036526"/>
+</kw>
+<arg>${retryScale}</arg>
+<arg>${RETRY_DELAY}</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-11-02T04:16:48.798558" elapsed="0.036869"/>
+</kw>
+<doc>Click on a given button</doc>
+<status status="PASS" start="2025-11-02T04:16:48.186824" elapsed="0.648673"/>
+</kw>
+<status status="PASS" start="2025-11-02T04:16:48.186463" elapsed="0.649067"/>
+</kw>
+<status status="PASS" start="2025-11-02T04:16:45.038606" elapsed="3.796954"/>
+</kw>
+<kw name="Alert Title Should Be [Arguments] ${SIGNED_UP_SUCCESS_ALERT_TITLE}" owner="CommonPo" source_name="Alert Title Should Be [Arguments] ${alertTitle}">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-11-02T04:16:48.836319" level="INFO">${androidAlertTitleLocator} = id=android:id/alertTitle</msg>
+<var>${androidAlertTitleLocator}</var>
+<arg>id=android:id/alertTitle</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-11-02T04:16:48.836208" elapsed="0.000127"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Element Text Should Be [Arguments] ${androidAlertTitleLocator} ${alertTitle} ${SMALL_RETRY_COUNT}" owner="CommonPo" source_name="Element Text Should Be [Arguments] ${locator} ${text} ${retryScale}">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-11-02T04:16:51.213185" level="INFO">criteria is android:id/alertTitle
+criteria is android:id/alertTitle
+criteria is android:id/alertTitle
+criteria is android:id/alertTitle
+criteria is android:id/alertTitle</msg>
+<arg>${locator}</arg>
+<doc>Waits until the element specified by the ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-02T04:16:48.837428" elapsed="2.375845"/>
+</kw>
+<arg>${retryScale}</arg>
+<arg>${RETRY_DELAY}</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-11-02T04:16:48.837271" elapsed="2.376093"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Element Text Should Be" owner="AppiumLibrary">
+<msg time="2025-11-02T04:16:51.214770" level="INFO">Verifying element 'id=android:id/alertTitle' contains exactly text 'Signed Up!'.</msg>
+<msg time="2025-11-02T04:16:51.223608" level="INFO">criteria is android:id/alertTitle</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Verifies that the element identified by ``locator`` contains the exact text ``expected``.</doc>
+<status status="PASS" start="2025-11-02T04:16:51.213815" elapsed="0.009859"/>
+</kw>
+<arg>${retryScale}</arg>
+<arg>${RETRY_DELAY}</arg>
+<arg>Element Text Should Be</arg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-11-02T04:16:51.213558" elapsed="0.010173"/>
+</kw>
+<doc>Validate the text of an element</doc>
+<status status="PASS" start="2025-11-02T04:16:48.837059" elapsed="2.386727"/>
+</kw>
+<arg>'${PLATFORM_NAME}' == '${ANDROID_PLATFORM_NAME}'</arg>
+<arg>Element Text Should Be [Arguments] ${androidAlertTitleLocator} ${alertTitle} ${SMALL_RETRY_COUNT}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-11-02T04:16:48.836434" elapsed="2.387378"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-11-02T04:16:51.224103" level="INFO">${iosAlertTitleLocator} = accessibility_id=Signed Up!</msg>
+<var>${iosAlertTitleLocator}</var>
+<arg>accessibility_id=${alertTitle}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-11-02T04:16:51.223931" elapsed="0.000188"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${PLATFORM_NAME}' == '${IOS_PLATFORM_NAME}'</arg>
+<arg>Element Should Be Visible [Arguments] ${iosAlertTitleLocator} ${SMALL_RETRY_COUNT}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-11-02T04:16:51.224212" elapsed="0.000127"/>
+</kw>
+<doc>Validate the text of the alert title</doc>
+<status status="PASS" start="2025-11-02T04:16:48.835925" elapsed="2.388450"/>
+</kw>
+<kw name="Alert Message Should Be [Arguments] ${SIGNED_UP_SUCCESS_ALERT_MESSAGE}" owner="CommonPo" source_name="Alert Message Should Be [Arguments] ${alertMessage}">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-11-02T04:16:51.224915" level="INFO">${androidAlertMessageLocator} = id=android:id/message</msg>
+<var>${androidAlertMessageLocator}</var>
+<arg>id=android:id/message</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-11-02T04:16:51.224834" elapsed="0.000095"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Element Text Should Be [Arguments] ${androidAlertMessageLocator} ${alertMessage} ${SMALL_RETRY_COUNT}" owner="CommonPo" source_name="Element Text Should Be [Arguments] ${locator} ${text} ${retryScale}">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-11-02T04:16:51.234621" level="INFO">criteria is android:id/message</msg>
+<arg>${locator}</arg>
+<doc>Waits until the element specified by the ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-02T04:16:51.225936" elapsed="0.008747"/>
+</kw>
+<arg>${retryScale}</arg>
+<arg>${RETRY_DELAY}</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-11-02T04:16:51.225784" elapsed="0.008980"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Element Text Should Be" owner="AppiumLibrary">
+<msg time="2025-11-02T04:16:51.236252" level="INFO">Verifying element 'id=android:id/message' contains exactly text 'You successfully signed up!'.</msg>
+<msg time="2025-11-02T04:16:51.245335" level="INFO">criteria is android:id/message</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Verifies that the element identified by ``locator`` contains the exact text ``expected``.</doc>
+<status status="PASS" start="2025-11-02T04:16:51.235169" elapsed="0.010228"/>
+</kw>
+<arg>${retryScale}</arg>
+<arg>${RETRY_DELAY}</arg>
+<arg>Element Text Should Be</arg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-11-02T04:16:51.234940" elapsed="0.010512"/>
+</kw>
+<doc>Validate the text of an element</doc>
+<status status="PASS" start="2025-11-02T04:16:51.225574" elapsed="0.019928"/>
+</kw>
+<arg>'${PLATFORM_NAME}' == '${ANDROID_PLATFORM_NAME}'</arg>
+<arg>Element Text Should Be [Arguments] ${androidAlertMessageLocator} ${alertMessage} ${SMALL_RETRY_COUNT}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-11-02T04:16:51.225012" elapsed="0.020515"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-11-02T04:16:51.245819" level="INFO">${iosAlertMessageLocator} = accessibility_id=You successfully signed up!</msg>
+<var>${iosAlertMessageLocator}</var>
+<arg>accessibility_id=${alertMessage}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-11-02T04:16:51.245650" elapsed="0.000186"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${PLATFORM_NAME}' == '${IOS_PLATFORM_NAME}'</arg>
+<arg>Element Should Be Visible [Arguments] ${iosAlertMessageLocator} ${SMALL_RETRY_COUNT}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-11-02T04:16:51.245932" elapsed="0.000126"/>
+</kw>
+<doc>Validate the text of the alert message</doc>
+<status status="PASS" start="2025-11-02T04:16:51.224623" elapsed="0.021471"/>
+</kw>
+<kw name="Close Application" owner="AppiumLibrary" type="TEARDOWN">
+<doc>Closes the current application and the webdriver session.</doc>
+<status status="PASS" start="2025-11-02T04:16:51.246264" elapsed="0.108068"/>
+</kw>
+<tag>Smoke</tag>
+<status status="PASS" start="2025-11-02T04:16:40.776921" elapsed="10.577525"/>
+</test>
+<status status="PASS" start="2025-11-02T04:16:40.698748" elapsed="10.656080"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">Smoke</stat>
+</tag>
+<suite>
+<stat name="Signup-Test" id="s1" pass="1" fail="0" skip="0">Signup-Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
